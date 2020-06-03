@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}Login | Just Books{% endblock %}
+
+{% block body %}
+	<div class="main">
+		<img id="icon" src="{{ url_for('static', filename='book.jpg') }}">
+		<div class="card mx-auto">
+			<h5 class="card-header">Welcome!</h5>
+			<div class="card-body">
+			    <form action="{{ url_for('login') }}" method="POST" role="form" data-toggle="validator" novalidate="true">
+			        <div class="form-group">
+			            <input class="form-control" name="username" placeholder="Username" type="text" required="required" data-error="Please enter a username">
+			            <div class="help-block with-errors"></div>
+			        </div>
+			        <div class="form-group">
+			            <input class="form-control" name="password" placeholder="Password" type="password" required="required" data-error="Please enter a password">
+			            <div class="help-block with-errors"></div>
+			        </div>
+					<button class="btn btn-outline-info" type="submit">Login</button>
+				</form>
+			</div>
+		    {% if message %}
+				<div class="alert alert-danger mx-auto" role="alert">{{ message }}</div>
+			{% endif %}
+			<p>Don't have an account? <a href="{{ url_for('register') }}" class="card-link">Register</a></p>
+		</div>
+	</div>
+{% endblock %}

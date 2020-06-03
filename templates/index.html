@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Home | Just Books{% endblock %}
+
+{% block body %}
+	<div class="main">
+		<img id="icon" src="{{ url_for('static', filename='search.jpg') }}">
+		<div class="card mx-auto">
+			<h5 class="card-header">What are you looking for?</h5>
+			<div class="card-body">
+			    <form action="{{ url_for('search') }}" method="POST" role="form" data-toggle="validator" novalidate="true">
+			        <div class="form-group">
+			            <input class="form-control" name="search" placeholder="ISBN/Title/Author" type="text" required="required" data-error="No information entered">
+			            <div class="help-block with-errors"></div>
+			        </div>
+					<button class="btn btn-outline-info" type="submit">Search</button>
+				</form>
+			</div>
+		    {% if message %}
+				<div class="alert alert-danger mx-auto" role="alert">{{ message }}</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

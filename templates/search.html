@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Search Results | Just Books{% endblock %}
+
+{% block body %}
+	<div class="main">
+		<h5>Search Results</h5>
+		<hr>
+		<div class="search-content">
+			{% for result in results %}
+				<div class="card border-info mb-3 mx-auto" style="width: 18rem;">
+					<div class="card-body">
+						<img class="card-img-top" style="width: 100px; margin-bottom: 5px;" src="http://covers.openlibrary.org/b/isbn/{{ result['isbn'] }}-M.jpg">
+						<h6 class="card-title"><a href="{{ url_for('book', isbn=result['isbn']) }}">{{ result["title"] }}</a></h6>
+						<p class="card-text" style="font-size: 14px;">by: {{ result["author"] }}</p>
+						<p class="card-text"><small class="text-muted">ISBN: {{ result["isbn"] }}</small></p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

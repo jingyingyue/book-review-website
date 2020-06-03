@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}API | Just Books{% endblock %}
+
+{% block body %}
+	<div class="main">
+		<img id="icon" src="{{ url_for('static', filename='lightbulb.jpg') }}">
+		<div class="card mx-auto">
+			<h5 class="card-header">Instructions</h5>
+			<div class="card-body">
+				<p><code>https://justbooks.herokuapp.com/api/<i>$isbn</i></code></p>
+				<p style="font-size: 14px;">where <i>$isbn</i> is a book's ISBN</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Register | Just Books{% endblock %}
+
+{% block body %}
+	<div class="main">
+		<img id="icon" src="{{ url_for('static', filename='book.jpg') }}">
+		<div class="card mx-auto">
+			<h5 class="card-header">Register</h5>
+			<div class="card-body">
+			    <form action="{{ url_for('register') }}" method="POST" role="form" data-toggle="validator" novalidate="true">
+			        <div class="form-group">
+			            <input class="form-control" name="username" placeholder="Username" type="text" required="required" data-error="Please enter a username">
+			            <div class="help-block with-errors"></div>
+			        </div>
+			        <div class="form-group">
+			            <input class="form-control" name="password" placeholder="Password" type="password" required="required" data-error="Please enter a password">
+			            <div class="help-block with-errors"></div>
+			        </div>
+					<button class="btn btn-outline-info" type="submit">Create account</button>
+				</form>
+			</div>
+		    {% if message %}
+				<div class="alert alert-danger mx-auto" role="alert">{{ message }}</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
