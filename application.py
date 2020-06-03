@@ -146,6 +146,10 @@ def book(isbn):
 			if db.execute("SELECT * FROM reviews WHERE user_id=:user_id AND book_id=:book_id",
 							{"user_id": user[0], "book_id": book[0]}).rowcount!=0:
 				return render_template("book.html", book=book, gr_info=gr_info, reviews=reviews, message="You already reviewed this book")
+			
+			# check if user did not write opinion or give a rating
+			if not rating or not opinion:
+				return render_template("book.html", book=book, gr_info=gr_info, reviews=reviews, message="No opinion/rating given")
 
 			# add review to database
 			db.execute("INSERT INTO reviews (rating, opinion, user_id, book_id) VALUES (:rating, :opinion, :user_id, :book_id)",
