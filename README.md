@@ -1,9 +1,9 @@
 # Book Review Website
-## Demo
-https://youtu.be/eO-pl4CAahQ
-
 ## Link
 https://justbooks.herokuapp.com
+
+## Demo
+https://youtu.be/eO-pl4CAahQ
 
 ## Functions
 ### 1. Register
