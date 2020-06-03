@@ -35,3 +35,7 @@ Display details and reviews about a book + Post your own review
 Instructions on how to access API
 ![API Page](https://i.imgur.com/4o5SODB.png)
 * api.html
+
+## References
+1. [Goodreads API](https://www.goodreads.com/api "Goodreads API")
+2. [Star ratings widget](https://codepen.io/jamesbarnett/pen/vlpkh "Star rating widget")
