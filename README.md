@@ -1,4 +1,4 @@
-# Book Review Website
+# Just Books
 ## Link
 https://justbooks.herokuapp.com
 
