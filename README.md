@@ -36,7 +36,3 @@ Instructions on how to access API
 ## References
 1. [Goodreads API](https://www.goodreads.com/api "Goodreads API")
 2. [Star ratings widget](https://codepen.io/jamesbarnett/pen/vlpkh "Star rating widget")
-
----
-
-*Completed under CS50W Web Programming with Python and JavaScript*
