@@ -11,7 +11,6 @@ https://youtu.be/fxnkqdu82zo
 ### 1. Register
 Create an account to access website
 ![Registration Page](https://i.imgur.com/zIq7Cjl.png)
-* register.html
 
 ### 2. Login
 Login to website
